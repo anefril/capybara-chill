@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Capybara Chill</title>
+<meta name="description" content="A capybara in a hot spring, lofi radio, points while you chill. Right inside this post.">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="cv" aria-label="A capybara in a hot spring"></canvas>
+
+<div id="bubble" hidden>scratch me? 🫳</div>
+
+<button id="zen" type="button" aria-label="Hide the interface"><svg class="i-x" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg><svg class="i-eye" viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 12s3.5-6 9.5-6 9.5 6 9.5 6-3.5 6-9.5 6-9.5-6-9.5-6z"/><circle cx="12" cy="12" r="2.6"/></svg></button>
+<button id="full" type="button" aria-label="Fullscreen" hidden><svg class="i-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V5a1 1 0 0 1 1-1h4M15 4h4a1 1 0 0 1 1 1v4M20 15v4a1 1 0 0 1-1 1h-4M9 20H5a1 1 0 0 1-1-1v-4"/></svg><svg class="i-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 4v4a1 1 0 0 1-1 1H4M20 9h-4a1 1 0 0 1-1-1V4M15 20v-4a1 1 0 0 1 1-1h4M4 15h4a1 1 0 0 1 1 1v4"/></svg></button>
+<div id="farm">
+  <span class="f-ic">🍊<i id="mult" hidden title="Royal: 25% more points">👑</i></span>
+  <div class="f-txt"><b id="pts">0</b><small id="sub">sign in to farm points</small></div>
+  <button id="signin" type="button">Sign in to farm</button>
+</div>
+
+<div id="toast" class="card" hidden>farming moved to another tab <button id="toast-go" type="button">farm here</button></div>
+
+<div id="tap" hidden>tap anywhere for sound 🎧</div>
+
+<div id="radio" class="fold">
+  <button id="r-play" type="button" aria-label="Play radio"><svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.4-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg><svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><rect x="6.5" y="5" width="4" height="14" rx="1.5"/><rect x="13.5" y="5" width="4" height="14" rx="1.5"/></svg></button>
+  <div class="r-t"><small><span class="eq" aria-hidden="true"><i></i><i></i><i></i></span>capy fm</small><span id="r-title">lofi radio</span></div>
+  <button id="r-next" type="button" aria-label="Next track"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 6.3v11.4a1 1 0 0 0 1.55.83L14 13.2V17a1 1 0 0 0 2 0V7a1 1 0 0 0-2 0v3.8L6.55 5.47A1 1 0 0 0 5 6.3z" transform="translate(1.5 0)"/></svg></button>
+  <input id="r-vol" type="range" min="0" max="1" step="0.05" value="0.7" aria-label="Volume">
+  <button id="r-fold" type="button" aria-label="Show the player"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg></button>
+</div>
+
+<div id="acts">
+  <button id="sky" type="button" aria-label="Time of day: your clock"><b>🕰️</b></button>
+  <button id="help" type="button" aria-label="How it works">?</button>
+  <button id="share" type="button"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3.5a1 1 0 0 1 .7.3l3.5 3.5a1 1 0 1 1-1.4 1.4L13 6.9V14a1 1 0 0 1-2 0V6.9L9.2 8.7a1 1 0 0 1-1.4-1.4l3.5-3.5a1 1 0 0 1 .7-.3zM5 12a1 1 0 0 1 1 1v5h12v-5a1 1 0 1 1 2 0v5.5a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 4 18.5V13a1 1 0 0 1 1-1z"/></svg><span>Share</span></button>
+  <button id="royal" type="button" hidden><b>👑</b><span>+25% with Royal</span></button>
+  <button id="lb-open" type="button"><b>🏆</b><span>Top</span></button>
+</div>
+
+<div id="how" hidden>
+  <div class="how-t">Just chill 🍊</div>
+  <ul>
+    <li><span>♨️</span><p>Keep Capy company and get <b>100 points</b> every minute</p></li>
+    <li><span>🫳</span><p>Capy asks for a scratch now and then. <b>Tap</b> to keep the points coming</p></li>
+    <li><span>👑</span><p>Royal friends get <b>25% more</b></p></li>
+    <li><span>🏆</span><p>Climb the board and show off on X</p></li>
+  </ul>
+  <button id="follow" type="button">Follow @NukeKevDev</button>
+  <small class="credits">Rocks, ferns, flowers, lantern: Poly Haven, CC0</small>
+</div>
+
+<div id="lb-shade" hidden></div>
+<div id="lb" hidden role="dialog" aria-label="Leaderboard">
+  <button id="lb-x" type="button" aria-label="Close">✕</button>
+  <div class="lb-head"><span class="lb-ic">🍊</span><div><div class="lb-t">Capy Friends</div><div class="lb-s">who's been chilling the most</div></div></div>
+  <div id="lb-tabs"><button type="button" data-b="today" class="on">Today</button><button type="button" data-b="all">All time</button></div>
+  <ol id="lb-list"></ol>
+  <div id="lb-me"></div>
+  <div id="lb-foot"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

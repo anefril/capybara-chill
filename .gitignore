@@ -1,0 +1,10 @@
+node_modules/
+public/
+worker/dist/
+.wrangler/
+art/src/
+video/out/
+shot-*.png
+.dev.vars
+.env
+.env.*

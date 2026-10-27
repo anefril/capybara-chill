@@ -1,0 +1,16 @@
+{
+  "game": "capybara",
+  "main": "worker/dist/index.js",
+  "assets": "public",
+  "durable_objects": {
+    "POND": "Pond"
+  },
+  "card": {
+    "title": "Capybara Chill",
+    "description": "A capybara in a hot spring, lofi radio, points while you chill. Right inside this post.",
+    "image": "/card-x.png",
+    "player": "/",
+    "width": 480,
+    "height": 300
+  }
+}

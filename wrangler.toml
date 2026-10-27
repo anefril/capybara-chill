@@ -1,0 +1,22 @@
+# local test only (npm run dev): the same bindings as sojo.json, plus LOCAL_DEV for "dev:<name>" tokens.
+# Sojo deploys from sojo.json and never reads this file
+name = "capybara-local"
+main = "worker/dist/index.js"
+compatibility_date = "2025-09-01"
+
+[assets]
+directory = "public"
+binding = "ASSETS"
+
+[[durable_objects.bindings]]
+name = "POND"
+class_name = "Pond"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["Pond"]
+
+[vars]
+SOJO_GAME = "capybara"
+SOJO_ENV = "dev"
+LOCAL_DEV = "1"
