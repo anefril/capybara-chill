@@ -4,7 +4,7 @@ A capybara in a hot spring, **inside an X post**. Lofi radio, sakura petals, a r
 
 ▶ **Play:** https://capybara.sojo.gg, or tap the card in the [launch post](https://x.com/NukeKevDev/status/2115002602983457219).
 
-![Capybara Chill](art/card-x.png)
+![Capybara Chill at sunrise](art/readme-morning.jpg)
 
 ## What's inside
 
